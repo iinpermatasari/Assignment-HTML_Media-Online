@@ -9,32 +9,45 @@
         <h1>Buat Account Baru</h1>
          <p>Sign up untuk bergabung dengan kami!</p>
         <h3>Sign Up Form</h3>
+
+    <!-- Form dengan method GET yang akan mengirimkan data dan nantinya menuju ke welcome.html --->  
         <form action="welcome.html" method="get">
+
+            <!-- Input untuk nama depan dan nama belakang-->
             <label for="first-name">First name:</label><br>
             <input type="text" id="first-name" name="first-name"><br>
             <label for="last-name">Last name:</label><br>
             <input type="text" id="last-name" name="last-name"><br><br>
+
+            <!-- Input untuk gender menggunakan radio button (tombol untuk memilih salah satu dari banyak pilihan)-->
             <p>Gender:</p>
             <input type="radio" id="male" name="gender" value="male">
             <label for="male">Male</label><br>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label><br><br>
             
+            <!-- Input untuk kewarganegaraan menggunakan tag select nantinya menjadi dropdown -->
             <p>Nationality:</p>
             <select id="nationality" name="nationality">
                 <option value="indonesian">Indonesian</option>
                 <option value="amerika">Amerika</option>
                 <option value="inggris">Inggris</option>
             </select>
+
+            <!-- Input untuk bahasa yang dikuasai menggunakan checkbox (tombol untuk memilih lebih dari satu pilihan)-->
             <p>Language Spoken:</p>
             <input type="checkbox" id="bahasa-indonesia" name="language" value="bahasa-indonesia">
             <label for="bahasa-indonesia">Bahasa Indonesia</label><br>
             <input type="checkbox" id="english" name="language" value="english">
             <label for="english">English</label><br> 
             <input type="checkbox" id="other" name="language" value="other">
-            <label for="other">Other</label><br><br>   
+            <label for="other">Other</label><br><br>
+            
+            <!-- Input untuk bio menggunakan tag textarea untuk membuat area teks yang lebih besar-->
             <label for="bio">Bio:</label><br>
             <textarea id="bio" name="bio" rows="10" cols="50"></textarea><br><br>    
+
+            <!-- Tombol submit untuk mengirimkan data yang telah diisi pada form-->
             <input type="submit" value="Sign Up">        
         </form>
     </body>
