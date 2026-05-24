@@ -1,54 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form HTML</title>
+  <title>Form HTML - Bootstrap 5</title>
+  
+  <!-- Menggunakan CDN Bootstrap 5.3.3 yang stabil -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-    <body>
-        <h1>Buat Account Baru</h1>
-         <p>Sign up untuk bergabung dengan kami!</p>
-        <h3>Sign Up Form</h3>
+<body class="bg-light">
 
-    <!-- Form dengan method GET yang akan mengirimkan data dan nantinya menuju ke welcome.html --->  
-        <form action="welcome.html" method="get">
+  <!-- Container untuk memberikan ruang dan jarak aman di sisi layar -->
+  <div class="container my-5" style="max-width: 600px;">
+    
+    <!-- Bagian Header Card -->
+    <div class="card shadow-sm p-4 mb-4 bg-white rounded">
+      <h1 class="h2 text-primary fw-bold">Buat Account Baru</h1>
+      <p class="text-muted">Sign up untuk bergabung dengan kami!</p>
+      <hr>
+      <h3 class="h5 mb-4 text-secondary">Sign Up Form</h3>
 
-            <!-- Input untuk nama depan dan nama belakang-->
-            <label for="first-name">First name:</label><br>
-            <input type="text" id="first-name" name="first-name"><br>
-            <label for="last-name">Last name:</label><br>
-            <input type="text" id="last-name" name="last-name"><br><br>
+      <!-- Form dengan Bootstrap -->
+      <form action="welcome.html" method="get">
 
-            <!-- Input untuk gender menggunakan radio button (tombol untuk memilih salah satu dari banyak pilihan)-->
-            <p>Gender:</p>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br><br>
-            
-            <!-- Input untuk kewarganegaraan menggunakan tag select nantinya menjadi dropdown -->
-            <p>Nationality:</p>
-            <select id="nationality" name="nationality">
-                <option value="indonesian">Indonesian</option>
-                <option value="amerika">Amerika</option>
-                <option value="inggris">Inggris</option>
-            </select>
+        <!-- Input Nama Depan -->
+        <div class="mb-3">
+          <label for="first-name" class="form-label fw-semibold">First name</label>
+          <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Masukkan nama depan" required>
+        </div>
 
-            <!-- Input untuk bahasa yang dikuasai menggunakan checkbox (tombol untuk memilih lebih dari satu pilihan)-->
-            <p>Language Spoken:</p>
-            <input type="checkbox" id="bahasa-indonesia" name="language" value="bahasa-indonesia">
-            <label for="bahasa-indonesia">Bahasa Indonesia</label><br>
-            <input type="checkbox" id="english" name="language" value="english">
-            <label for="english">English</label><br> 
-            <input type="checkbox" id="other" name="language" value="other">
-            <label for="other">Other</label><br><br>
-            
-            <!-- Input untuk bio menggunakan tag textarea untuk membuat area teks yang lebih besar-->
-            <label for="bio">Bio:</label><br>
-            <textarea id="bio" name="bio" rows="10" cols="50"></textarea><br><br>    
+        <!-- Input Nama Belakang -->
+        <div class="mb-3">
+          <label for="last-name" class="form-label fw-semibold">Last name</label>
+          <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Masukkan nama belakang" required>
+        </div>
 
-            <!-- Tombol submit untuk mengirimkan data yang telah diisi pada form-->
-            <input type="submit" value="Sign Up">        
-        </form>
-    </body>
+        <!-- Input Gender (Radio Buttons) -->
+        <div class="mb-3">
+          <label class="form-label d-block fw-semibold">Gender</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="male" name="gender" value="male" required>
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="female" name="gender" value="female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+        
+        <!-- Input Kewarganegaraan (Dropdown Select) -->
+        <div class="mb-3">
+          <label for="nationality" class="form-label fw-semibold">Nationality</label>
+          <select id="nationality" name="nationality" class="form-select">
+            <option value="indonesian" selected>Indonesian</option>
+            <option value="amerika">Amerika</option>
+            <option value="inggris">Inggris</option>
+          </select>
+        </div>
+
+        <!-- Input Bahasa (Checkbox) -->
+        <div class="mb-3">
+          <label class="text-dark fw-semibold mb-2 d-block">Language Spoken</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="bahasa-indonesia" name="language" value="bahasa-indonesia">
+            <label class="form-check-label" for="bahasa-indonesia">Bahasa Indonesia</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="english" name="language" value="english">
+            <label class="form-check-label" for="english">English</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="other" name="language" value="other">
+            <label class="form-check-label" for="other">Other</label>
+          </div>
+        </div>
+        
+        <!-- Input Bio (Textarea) -->
+        <div class="mb-4">
+          <label for="bio" class="form-label fw-semibold">Bio</label>
+          <textarea id="bio" name="bio" rows="4" class="form-control" placeholder="Ceritakan sedikit tentang dirimu..."></textarea>
+        </div>    
+
+        <!-- Tombol Submit ala Bootstrap (Biru penuh dan responsif) -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary fw-bold py-2">Sign Up</button>
+        </div>       
+      </form>
+    </div>
+
+  </div>
+
+  <!-- JS Bootstrap diletakkan di paling bawah body -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
