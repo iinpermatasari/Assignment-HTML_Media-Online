@@ -24,15 +24,18 @@
       <form action="welcome.html" method="get">
 
         <!-- Input Nama Depan -->
-        <div class="mb-3">
-          <label for="first-name" class="form-label fw-semibold">First name</label>
-          <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Masukkan nama depan" required>
-        </div>
-
-        <!-- Input Nama Belakang -->
-        <div class="mb-3">
-          <label for="last-name" class="form-label fw-semibold">Last name</label>
-          <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Masukkan nama belakang" required>
+       <div class="row">
+          <!-- First Name (Jatah 6 kolom) -->
+          <div class="col-md-6 mb-3">
+            <label for="first-name" class="form-label fw-semibold">First name</label>
+            <input type="text" id="first-name" name="first-name" class="form-control py-2" placeholder="Nama depan">
+          </div>
+          
+          <!-- Last Name (Jatah 6 kolom) -->
+          <div class="col-md-6 mb-3">
+            <label for="last-name" class="form-label fw-semibold">Last name</label>
+            <input type="text" id="last-name" name="last-name" class="form-control py-2" placeholder="Nama belakang">
+          </div>
         </div>
 
         <!-- Input Gender (Radio Buttons) -->
